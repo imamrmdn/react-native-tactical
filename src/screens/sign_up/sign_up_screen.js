@@ -137,6 +137,7 @@ export function SignUpScreen(){
               />
               
               <TouchableOpacity  
+                style={styles.buttonAlready}
                 disabled={isLoadingSignUp}
                 onPress={onHandleBackSignIn}
               >
@@ -178,7 +179,8 @@ const styles = StyleSheet.create({
   },   
   button: {
     height: hp('6%'),
-    justifyContent: 'center'
+    justifyContent: 'center',
+    marginBottom: hp('5%')
   },
   text: {
     color: 'white'
@@ -187,7 +189,6 @@ const styles = StyleSheet.create({
     colors: { primary: colorScheme.green }
   },
   already: {
-    marginTop: hp('4%'),
     fontSize: wp('4%'),
     textAlign: 'center',
     color: 'black'
@@ -205,4 +206,10 @@ const styles = StyleSheet.create({
     width: wp('15%'),
     borderRadius: wp('10%'),
   },
+  buttonAlready: { 
+    justifyContent: 'center', 
+    alignItems: 'center', 
+    height: hp('4%'), 
+    padding: wp('1%') 
+  }
 }); 

@@ -132,6 +132,6 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between'
     },
     column: {
-        flexDirection: 'column'
+        flexDirection: 'column',
     }
 })

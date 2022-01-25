@@ -14,7 +14,7 @@ export function Root(){
     return(
         <Drawer.Navigator
             drawerContent={props => <CustomDrawer {...props} />}
-            screenOptions={{drawerActiveBackgroundColor: colorScheme.green}}
+            screenOptions={{drawerActiveBackgroundColor: colorScheme.yellow }}
         >
             {(routesDrawer.map(v => (
                 <Drawer.Screen

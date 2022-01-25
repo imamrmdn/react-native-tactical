@@ -1,16 +1,12 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
-import {
-  DrawerContentScrollView,
-  DrawerItemList,
-  DrawerItem
-} from '@react-navigation/drawer';
+import { DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawer';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import { Divider, Title } from 'react-native-paper';
-import Icon from 'react-native-vector-icons/FontAwesome';
+
+import { colorScheme } from '../theme/theme';
 
 import text from '../../../text.json';
-
 
 export function CustomDrawer(props){
 
@@ -37,9 +33,6 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
-    image: {
-        //width: wp('10%')
-    },
     title: {
         textAlign: 'center',
         fontSize: wp('6%'),
@@ -50,10 +43,11 @@ const styles = StyleSheet.create({
     },
     copyright: {
         textAlign: 'center',
-        marginBottom: wp('4%')
+        marginBottom: wp('4%'),
+        color: colorScheme.black
     },
     divider: {
-        borderColor: 'black',
+        borderColor: colorScheme.black,
         height: 1,
         margin: wp('2%')
     }

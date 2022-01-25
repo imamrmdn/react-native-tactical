@@ -29,7 +29,7 @@ export function MateriDetailScreen(){
                         <Title>{title}</Title>
                         <Divider />
                         <Text style={styles.text} >{text.pelaksanaan}</Text>
-                        <Paragraph textBreakStrategy="highQuality" >{desc}</Paragraph>
+                        <Paragraph style={styles.paragraph} textBreakStrategy="highQuality" >{desc}</Paragraph>
 
                         {/* Picture */}
                         <Image 
@@ -61,8 +61,11 @@ const styles = StyleSheet.create({
         marginTop: hp('4%'),
         color:'black',
     },
+    paragraph: {
+        fontSize: wp('4%')
+    },
     picture: {
-        marginTop: hp('5%'),
+        marginTop: hp('4%'),
         width: wp('87%'), 
         height: hp('22%'),
         marginBottom: hp('3%')

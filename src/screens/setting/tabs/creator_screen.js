@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
         marginTop: wp('2%'),
     },
     leftStyle: {
-        marginRight: wp('8%')
+        marginRight: wp('10%')
     },
     content: {
         marginTop: hp('2%'),
