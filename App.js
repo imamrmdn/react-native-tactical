@@ -9,8 +9,8 @@
 import React from 'react';
 import { StatusBar } from 'react-native';
 import { colorScheme } from './src/components/theme/theme';
-import Routes from './src/routes/routes';
 import { LogBox } from 'react-native';
+import Routes from './src/routes/routes';
 
 // ignore warning
 LogBox.ignoreLogs([

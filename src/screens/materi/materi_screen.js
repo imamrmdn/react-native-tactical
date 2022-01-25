@@ -1,7 +1,8 @@
 import React from 'react';
 import { List } from 'react-native-paper';
-import data from '../../../data.json';
 import { useNavigation } from '@react-navigation/native';
+
+import data from '../../../data.json';
 
 export function MateriScreen(){
 
