@@ -2,6 +2,7 @@ import React from 'react';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import { UserScreen } from './tabs/user_screen';
 import { CreatorScreen } from './tabs/creator_screen';
+import { colorScheme } from '../../components/theme/theme';
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -13,14 +14,14 @@ export function SettingScreen(){
                 name="Creator" 
                 component={CreatorScreen} 
                 options={{
-                    tabBarIndicatorStyle: { backgroundColor: 'green'}
+                    tabBarIndicatorStyle: { backgroundColor: colorScheme.greenOld }
                 }}
             />
             <Tab.Screen 
                 name="User" 
                 component={UserScreen} 
                 options={{
-                    tabBarIndicatorStyle: { backgroundColor: 'green'}
+                    tabBarIndicatorStyle: { backgroundColor: colorScheme.greenOld }
                 }}
             />
         </Tab.Navigator>

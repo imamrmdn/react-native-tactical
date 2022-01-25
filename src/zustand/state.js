@@ -20,6 +20,7 @@ export const useAuth = create((set, get) => ({
     setErrorSignIn: () => set({ setError: false }),
     setIsLoadingSignIn: () => set({ isLoadingSignIn: false }),
     disabled: false,
+
     fetchAuthSignIn: async (email, password) => {
        
         set({ isLoadingSignIn: true });
@@ -74,7 +75,7 @@ export const useAuth = create((set, get) => ({
         set({ token: null });
         set({ response: {} });
     },
-    // State Regis
+ 
     errorSignUp: false,
     isLoadingSignUp: false,
     colorMessage: 'red',
@@ -88,29 +89,29 @@ export const useAuth = create((set, get) => ({
 
         set({ isLoadingSignUp: true });
 
-        if(nama.length <= 0){
-            set({ errorMessage: 'Username Can Not be Empty!' })
+        if(nama.length <= 0){ //<-- validation if username null
+            set({ errorMessage: text.errorSignUpUsername })
             setTimeout(() => {
                 set({ errorSignUp: true })
             }, 50)
             succesSignUp = false;
             return succesSignUp;
-        }else if(email.length <= 0){
-            set({ errorMessage: 'Email Can Not be Empty!' })
+        }else if(email.length <= 0){ //<-- validation if email null
+            set({ errorMessage: text.errorSignUpEmail })
             setTimeout(() => {
                 set({ errorSignUp: true })
             }, 150)
             succesSignUp = false;
             return succesSignUp;
-        }else if(noTelp.length <= 10){
-            set({ errorMessage: 'Phone Number Must be Valid!' })
+        }else if(noTelp.length <= 10){ //<-- validation if phone number <= 10
+            set({ errorMessage: text.errorSignUpNoTelp })
             setTimeout(() => {
                 set({ errorSignUp: true })
             }, 150)
             succesSignUp = false;
             return succesSignUp;
-        }else if(password.length <= 0){
-            set({ errorMessage: 'Password Can Not be Empty!' })
+        }else if(password.length <= 0){ //<-- validation if password null
+            set({ errorMessage: text.errorSignUpPassword })
             setTimeout(() => {
                 set({ errorSignUp: true })
             }, 150)
@@ -118,7 +119,7 @@ export const useAuth = create((set, get) => ({
             return succesSignUp;
         }else{
 
-            const objectPayload = {
+            const objectPayload = { //<-- request payload to backend/server
                 method: "post",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
@@ -128,46 +129,41 @@ export const useAuth = create((set, get) => ({
                 }),
             }
 
-            const response = await fetch(`${baseURL}/user/auth/register`, objectPayload);
+            const response = await fetch(`${baseURL}/user/auth/register`, objectPayload); 
+            const data = await response.json(); //<-- parse response to .json()
 
-            const data = await response.json();
-            console.log('response:', data);
+            if(data){ //<-- validation if response data true
 
-            if(data){
-                const status = data?.status;
+                const status = data?.status; //<-- response status
 
-                if(status){
+                if(status){ //<-- validation if status true
                   
-                    set({ errorMessage: 'Succes Register Account! Please Wait ...' })
-
+                    set({ errorMessage: text.succesSignUpMessage })
                     setTimeout(() => {
                         set({ errorSignUp: true, colorMessage: 'green' })
                     }, 50)
-
                     succesSignUp = true;
+
                     return succesSignUp;
                 }
 
-                if(!status){
+                if(!status){ //<-- validation if status false
 
-                    const error = data?.error;
-                    const usr = error.replaceAll('\"namePodcast\"', 'Username')
+                    const error = data?.error; //<-- response error
+                    const usr = error.replaceAll('\"namePodcast\"', 'Username') //<-- replace response
 
-                    console.log('error:', usr ? usr : error)
-
-                    usr ? set({ errorMessage: `${usr} !` }) : set({ errorMessage: `${error} !` })
+                    usr ? set({ errorMessage: `${usr} !` }) : set({ errorMessage: `${error} !` }) //<-- cek response error
 
                     setTimeout(() => {
                         set({ errorSignUp: true })
                     }, 100)
-
                     succesSignUp = false;
+
                     return succesSignUp;
                 }
-            
 
-            }else{
-                set({ errorMessage: 'Something Error From Server!' })
+            }else{ //<-- validation if response data false
+                set({ errorMessage: text.errorSignUpServer })
                 setTimeout(() => {
                     set({ errorSignUp: true })
                 }, 150)

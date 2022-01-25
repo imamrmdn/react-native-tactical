@@ -14,11 +14,18 @@
     "copyright": "© 2022 UNJ",
     "loading": "Loading ...",
     "webViewHome": "https://blogjambulani.blogspot.com/2021/01/sejarah-futsal-indonesia-dunia.html",
+    "sumber": "sumber:",
     "sumberUrl": "https://www.futsalworldranking.com",
     "headlineNews": "RANGKING FUTSAL INDONESIA",
     "paragraphNews": "Berdasarkan update dari Futsal World Rangking pada 14/1/2022, Indonesia menempati posisi ke-48. Sedangkan wakil Asia Tenggara yang berhasil menempati posisi 20 besar hanya dua negara, yaitu Jepang menempati posisi 16 dan Thailand menempati posisi 18.",
     "errorSignInEmpty": "Email or Password Can Not be Empty!",
     "errorSignIn": "Something Wrong Email or Password!",
     "pelaksanaan": "PELAKSANAAN:",
-    "seeVideo": "Lihat Video ..."
+    "seeVideo": "Lihat Video ...",
+    "succesSignUpMessage": "Succes Register Account! Please Wait ...",
+    "errorSignUpUsername": "Username Can Not be Empty!",
+    "errorSignUpEmail": "Email Can Not be Empty!",
+    "errorSignUpNoTelp": "Phone Number Must be Valid!",
+    "errorSignUpPassword": "Password Can Not be Empty!",
+    "errorSignUpServer": "Something Error From Server!"
 }

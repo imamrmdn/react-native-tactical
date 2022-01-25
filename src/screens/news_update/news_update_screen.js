@@ -13,7 +13,7 @@ export function NewsUpdateScreen(){
                     <Headline style={styles.headline}>{text.headlineNews}</Headline>
                     <Divider />
                     <Paragraph style={styles.paragraph}>{text.paragraphNews}</Paragraph>
-                    <Subheading>sumber: {text.sumberUrl}</Subheading>
+                    <Subheading>{text.sumber} {text.sumberUrl}</Subheading>
                 </Card.Content>
             </Card>
         </View>

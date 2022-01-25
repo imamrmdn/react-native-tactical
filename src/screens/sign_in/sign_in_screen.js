@@ -124,7 +124,7 @@ export function SignInScreen(){
 
           {/* Notif */}
             <Snackbar
-              style={{ backgroundColor: 'red' }}
+              style={{ backgroundColor: colorScheme.red }}
               duration={800}
               visible={setError}
               onDismiss={onHandleDismiss}

@@ -17,7 +17,6 @@ export function VideoMateriScreen(){
                 source={getVideo(pic)}
                 style={styles.video}
                 controls
-                //paused
                 resizeMode='contain' 
                 ref={(ref) => {
                     this.player = ref

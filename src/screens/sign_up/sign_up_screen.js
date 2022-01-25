@@ -10,7 +10,7 @@ import text from '../../../text.json';
 
 //third party
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
-import { useNavigation, useRoute } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 import { useAuth } from '../../zustand/state';
 
 export function SignUpScreen(){

@@ -7,21 +7,16 @@ export function MateriScreen(){
 
     const navigation = useNavigation();
 
-    const onHandleDetail = (title, desc, pic, vid, id) => {
+    const onHandleDetail = (title, desc, pic, id) => {
     
-        navigation.navigate('Materi Detail', {
-            title,
-            desc,
-            pic,
-            vid,
-            id
-        })
+        navigation.navigate('Materi Detail', { title, desc, pic, id });
+
     }
 
     return(
         <>
             <List.AccordionGroup >
-                {data?.response.map(v => (
+                {data?.response?.map(v => (
                     <List.Accordion
                         key={v?.key}
                         id={v?.key}
@@ -32,7 +27,7 @@ export function MateriScreen(){
                             <List.Item 
                                 key={e?.id} 
                                 title={e?.materi} 
-                                onPress={() => onHandleDetail(e?.title, e?.desc, e?.pic, e?.vid, e?.id)}
+                                onPress={() => onHandleDetail(e?.title, e?.desc, e?.pic, e?.id)}
                             />
                         ))}
                     </List.Accordion>

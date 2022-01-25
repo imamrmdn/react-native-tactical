@@ -52,10 +52,10 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     text: {
-        color:'white'
+        color: colorScheme.white
     },
     icon: {
-      backgroundColor: 'green'  
+      backgroundColor: colorScheme.greenOld  
     },
     box: {
         height: hp('2%')

@@ -4,9 +4,9 @@ import { useNavigation, useRoute } from '@react-navigation/native';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import { Card, Divider, Paragraph, Title } from 'react-native-paper';
 import { getImage } from '../../utils/getImage';
+import { colorScheme } from '../../components/theme/theme';
 
 import text from '../../../text.json';
-import { colorScheme } from '../../components/theme/theme';
 
 export function MateriDetailScreen(){
 
@@ -17,10 +17,7 @@ export function MateriDetailScreen(){
 
     const onHandleVideoDetail = () => {
 
-        navigation.navigate('Video Detail', {
-            id,
-            pic
-        })
+        navigation.navigate('Video Detail', { id, pic });
         
     }
 
@@ -81,7 +78,7 @@ const styles = StyleSheet.create({
     button: {
         justifyContent: 'center',
         alignItems: "center",
-        backgroundColor: "#648DB5",
+        backgroundColor: colorScheme.blueCustom,
         padding: wp('1%'),
         width: wp('30%'),
         height: hp('4%'),

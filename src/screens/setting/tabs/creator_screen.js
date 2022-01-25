@@ -4,9 +4,10 @@ import { Image, StyleSheet, View, Text } from 'react-native';
 import { Card, Divider, List } from 'react-native-paper';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
-import text from '../../../../text.json';
 import { colorScheme } from '../../../components/theme/theme';
 import { desc } from '../../../utils/biografi';
+
+import text from '../../../../text.json';
 
 export function CreatorScreen(){
 
@@ -36,9 +37,11 @@ export function CreatorScreen(){
 }
 
 const styles = StyleSheet.create({
-    container: { margin: wp('4%') },
+    container: { 
+        margin: wp('4%') 
+    },
     text: {
-        color:'black'
+        color: colorScheme.black
     },
     profile: {
         height: wp('15%'),
