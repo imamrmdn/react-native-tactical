@@ -70,7 +70,7 @@ export function MateriUploadScreen(){
                                 size={wp('15%')}
                                 onPress={onHandleUploadImage}
                             />
-                            <Text>Upload Image</Text>
+                            <Text style={styles.text}>Upload Image</Text>
                         </View>
                         
                         <View style={styles.column} >
@@ -81,7 +81,7 @@ export function MateriUploadScreen(){
                                 size={wp('15%')}
                                 onPress={onHandleUploadVideo}
                             />
-                            <Text>Upload Video</Text>
+                            <Text style={styles.text}>Upload Video</Text>
                         </View>
                     </View>
                     
