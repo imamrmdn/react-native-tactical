@@ -1,4 +1,3 @@
-import React from 'react';
 import { SignInScreen, SignUpScreen } from '../screens';
 
 //

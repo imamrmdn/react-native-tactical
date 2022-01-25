@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import { CustomDrawer } from '../components/custom_drawer/custom_drawer';
 import { colorScheme } from '../components/theme/theme';
 
-import { routesApp } from './routes.app';
+import { routesDrawer } from './routes.drawer';
 
 const Drawer = createDrawerNavigator();
 
@@ -16,7 +16,7 @@ export function Root(){
             drawerContent={props => <CustomDrawer {...props} />}
             screenOptions={{drawerActiveBackgroundColor: colorScheme.green}}
         >
-            {(routesApp.map(v => (
+            {(routesDrawer.map(v => (
                 <Drawer.Screen
                     key={v.id} 
                     name={v.name}

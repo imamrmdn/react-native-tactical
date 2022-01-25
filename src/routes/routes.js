@@ -9,12 +9,8 @@ import { useAuth } from '../zustand/state';
 
 //routes
 import { routesAuth } from './routes.auth';
-import { Root } from './routes.root';
-import { 
-    MateriDetailScreen, 
-    OnLoadingScreen,
-    VideoMateriScreen, 
-} from '../screens';
+import { routesApp } from './routes.app';
+import { OnLoadingScreen } from '../screens';
 
 //
 const Stack = createNativeStackNavigator();
@@ -36,21 +32,14 @@ export default function Routes(){
        <NavigationContainer>
            <Stack.Navigator>
                {(token) ? (
-                   <>
-                        <Stack.Screen 
-                            name="Root"
-                            component={Root}
-                            options={{ headerShown: false }}
-                        />
-                        <Stack.Screen 
-                            name="Materi Detail"
-                            component={MateriDetailScreen}
-                        />
-                        <Stack.Screen 
-                            name="Video Detail"
-                            component={VideoMateriScreen}
-                        />
-                   </>
+                   routesApp.map(e => (
+                       <Stack.Screen 
+                            key={e?.id}
+                            name={e?.name}
+                            component={e?.component}
+                            options={{ headerShown: e?.id === 0 ? false : true }}
+                       />
+                   ))
                ) : isLoad ? (
                     <Stack.Screen 
                         name="OnLoading"

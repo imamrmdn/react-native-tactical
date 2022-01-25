@@ -1,48 +1,24 @@
-import React from 'react';
-import { 
-    HomeScreen, 
-    MateriScreen, 
-    MateriUploadScreen, 
-    NewsUpdateScreen, 
-    SettingScreen
-} from '../screens';
-
+import { Root } from "./routes.root";
+import { MateriDetailScreen, VideoMateriScreen } from "../screens";
 
 //
 export const routesApp = [
     {
         id: 0,
-        name: "Home",
-        title: "Home",
-        icon: "home",
-        component: HomeScreen
+        name: "Root",
+        title: "Root",
+        component: Root
     },
     {
         id: 1,
-        name: "NewsUpdate",
-        title: "News Update",
-        icon: "paper-plane",
-        component: NewsUpdateScreen
+        name: "Materi Detail",
+        title: "Materi Detail",
+        component: MateriDetailScreen
     },
     {
         id: 2,
-        name: "Materi",
-        title: "Materi",
-        icon: "file",
-        component: MateriScreen
-    },
-    {
-        id: 3,
-        name: "MateriUpload",
-        title: "Materi Upload",
-        icon: "plus",
-        component: MateriUploadScreen
-    },
-    {
-        id: 4,
-        name: "Setting",
-        title: "Setting",
-        icon: "cog",
-        component: SettingScreen
+        name: "Video Detail",
+        title: "Video Detail",
+        component: VideoMateriScreen
     }
 ]
