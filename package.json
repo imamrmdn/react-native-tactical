@@ -6,9 +6,9 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
-    "prebuild": "npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res",
-    "test-build": "cd android && ./gradlew assembleDebug && cd ../",
-    "build": "cd android && ./gradlew assembleRelease && cd ../",
+    "pre-build": "npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res",
+    "build-debug": "cd android && ./gradlew assembleDebug && cd ../",
+    "build-release": "cd android && ./gradlew assembleRelease && cd ../",
     "clear": "cd android && ./gradlew clean && cd ../",
     "test": "jest",
     "lint": "eslint ."
