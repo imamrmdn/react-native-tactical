@@ -1,6 +1,6 @@
 # Welcome to React Native Tactical
 
-Experiment React Native Project, This project create with:
+This project create with
 
 - [Zustand State Management](https://github.com/pmndrs/zustand)
 - [React Native Paper](https://callstack.github.io/react-native-paper/)
@@ -9,6 +9,10 @@ Experiment React Native Project, This project create with:
 - [Axios](https://github.com/axios/axios)
 
 How to Build this Project:
+
+    npm install
+
+then:
 
     npm run clear
 
