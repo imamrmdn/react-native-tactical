@@ -22,8 +22,7 @@ export function SignInScreen(){
     const { 
       fetchAuthSignIn, setError, 
       setErrorSignIn, isLoadingSignIn, 
-      setIsLoadingSignIn, errorMessage, 
-      enabled, setEnableds 
+      setIsLoadingSignIn, errorMessage
     } = useAuth();
 
     const navigation = useNavigation();
@@ -42,7 +41,6 @@ export function SignInScreen(){
       setEmail('')
       setPassword('')
       navigation.navigate('SignUp')
-      if(enabled) setEnableds();
     }
 
     const onHandleDismiss = () => {

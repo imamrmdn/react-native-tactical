@@ -9,13 +9,6 @@ import { api, baseURL } from '../settings';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 //
-export const useStore = create((set) => ({
-    enableMenu: false,
-    setEnableMenu: () => set({ enableMenu: true}),
-    setDisableMenu: () => set({ enableMenu: false})
-}))
-
-//
 export const useAuth = create((set, get) => ({
     response: {},
     isLoadingSignIn: false,
