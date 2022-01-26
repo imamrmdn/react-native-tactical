@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 //
-export const baseURL = 'https://cryptic-thicket-69508.herokuapp.com/api';
+export const baseURL = 'YOUR_API_BASE_URL';
 
 //
 export const api = axios.create({ baseURL });
