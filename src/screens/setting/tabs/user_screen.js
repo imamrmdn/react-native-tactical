@@ -24,8 +24,9 @@ export function UserScreen(){
         <View style={styles.container} >
             <Card>
                 <Card.Title
-                    title={response?.email}
-                    subtitle={response?.name}
+                    title={response?.name}
+                    subtitle={response?.email}
+                    subtitleStyle={styles.subtitle}
                     leftStyle={styles.leftStyle}
                     left={(props) => <Avatar.Icon {...props} icon="account" size={wp('11%')} color={colorScheme.green} style={styles.icon} />}
             />
@@ -46,6 +47,9 @@ export function UserScreen(){
 const styles = StyleSheet.create({
     container: { 
         margin: wp('4%') 
+    },
+    subtitle: {
+        fontSize: wp('3%')
     },
     button: {
         height: hp('6%'),

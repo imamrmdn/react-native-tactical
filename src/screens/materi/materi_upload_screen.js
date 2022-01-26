@@ -121,7 +121,8 @@ const styles = StyleSheet.create({
     },
      button: {
         height: hp('6%'),
-        justifyContent: 'center'
+        justifyContent: 'center',
+        marginBottom: hp('3%')
     },
     textButton: {
         color: 'white'

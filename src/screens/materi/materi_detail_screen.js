@@ -26,10 +26,17 @@ export function MateriDetailScreen(){
             <View style={styles.container}>
                 <Card>
                     <Card.Content>
-                        <Title>{title}</Title>
+                        <Title style={styles.title} >{title}</Title>
                         <Divider />
                         <Text style={styles.text} >{text.pelaksanaan}</Text>
-                        <Paragraph style={styles.paragraph} textBreakStrategy="highQuality" >{desc}</Paragraph>
+                        <Paragraph 
+                            style={styles.paragraph}
+                            lineBreakMode="middle" 
+                            textBreakStrategy="highQuality"
+                            selectable 
+                        >
+                            {desc}
+                        </Paragraph>
 
                         {/* Picture */}
                         <Image 
@@ -57,15 +64,24 @@ const styles = StyleSheet.create({
     container: { 
         margin: wp('2%') 
     },
+    title: {
+        fontFamily: 'sans-serif-light',
+        fontWeight: 'bold'
+    },  
     text: {
         marginTop: hp('4%'),
+        marginBottom: hp('1%'),
+        fontSize: wp('3.5%'),
         color:'black',
+        fontFamily: 'sans-serif-light',
     },
     paragraph: {
-        fontSize: wp('4%')
+        fontSize: wp('3.5%'),
+        fontWeight: '300',
+        fontFamily: 'sans-serif-light',
     },
     picture: {
-        marginTop: hp('4%'),
+        marginTop: hp('3.5%'),
         width: wp('87%'), 
         height: hp('22%'),
         marginBottom: hp('3%')

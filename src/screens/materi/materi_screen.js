@@ -16,13 +16,18 @@ export function MateriScreen(){
 
     return(
         <>
-            <List.AccordionGroup >
+            <List.AccordionGroup 
+                //onAccordionPress={} 
+                //expandedId={} 
+            >
                 {data?.response?.map(v => (
                     <List.Accordion
                         key={v?.key}
                         id={v?.key}
                         title={v?.materi_title}
                         left={props => <List.Icon {...props} icon={v?.icon} />}
+                        //expanded={}
+                        //onPress={}
                     >
                         {v?.sub_materi?.map(e => (
                             <List.Item 

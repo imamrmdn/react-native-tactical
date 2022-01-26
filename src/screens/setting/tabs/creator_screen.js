@@ -8,6 +8,7 @@ import { colorScheme } from '../../../components/theme/theme';
 import { desc } from '../../../utils/biografi';
 
 import text from '../../../../text.json';
+import { color } from 'react-native-reanimated';
 
 export function CreatorScreen(){
 
@@ -18,6 +19,7 @@ export function CreatorScreen(){
                     leftStyle={styles.leftStyle} 
                     title={text.author}
                     subtitle={text.jurusan}
+                    subtitleStyle={styles.subtitle}
                     left={(props) => <Image {...props} source={require('../../../../assets/images/profile.jpg')} style={styles.profile}  />}
                 />
                 <Divider style={styles.divider} />
@@ -48,17 +50,22 @@ const styles = StyleSheet.create({
         width: wp('15%'),
         borderRadius: wp('10%'),
         marginTop: wp('2%'),
+        borderColor: colorScheme.greenOld,
+        borderWidth: 2
     },
     leftStyle: {
         marginRight: wp('10%')
+    },
+    subtitle: {
+        fontSize: wp('3%')
     },
     content: {
         marginTop: hp('2%'),
     },
     desc: {
-        fontWeight: '300',
+        fontWeight: '500',
         color: colorScheme.black,
-        fontFamily: 'poppins'
+        fontFamily: 'sans-serif-light',
     },
     row: {
         flexDirection: 'row',
