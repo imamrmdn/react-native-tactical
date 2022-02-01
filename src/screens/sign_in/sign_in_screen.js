@@ -123,14 +123,14 @@ export function SignInScreen(){
           </SafeAreaView>
 
           {/* Notif */}
-            <Snackbar
-              style={{ backgroundColor: colorScheme.red }}
-              duration={800}
-              visible={setError}
-              onDismiss={onHandleDismiss}
-            >
-              <Text>{errorMessage}</Text>
-            </Snackbar>
+          <Snackbar
+            style={{ backgroundColor: colorScheme.red }}
+            duration={800}
+            visible={setError}
+            onDismiss={onHandleDismiss}
+          >
+            <Text>{errorMessage}</Text>
+          </Snackbar>
         </>
     )
 }

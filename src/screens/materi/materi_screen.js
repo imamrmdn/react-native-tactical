@@ -29,7 +29,7 @@ export function MateriScreen(){
         fetchData();
     },[])
 
-    console.log(dataMateri.length)
+    console.log(dataMateri)
 
     return(
         <>
@@ -61,23 +61,14 @@ export function MateriScreen(){
                 ))}
 
                 {/* Materi UPload */}
-                {dataMateri.length > 0 && (
-                    <List.Accordion
-                        id="1"
-                        title="Materi Upload"
-                        left={props => <List.Icon {...props} 
-                        icon="folder-open" />}
-                    >
-                        {dataMateri?.map(e => (
-                            <List.Item 
-                                key={e?._id}
-                                title={e?.title}
-                                rippleColor={colorScheme.blueCustom}
-                                onPress={() => onHandleDetail('server', e?.title, e?.description, e?.coverImage, e?.audio, e?.id, e?.createdBy?.namePodcast)}
-                            />
-                        ))}
-                    </List.Accordion>
-                )}
+                <List.Accordion
+                    id="1"
+                    title="Materi Upload"
+                    left={props => <List.Icon {...props} 
+                    icon="folder-open" />}
+                >
+                    {/* if dataMateri length = 0 then not display materi upload */}
+                </List.Accordion>
             </List.AccordionGroup>
         </>
     )
