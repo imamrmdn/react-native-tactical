@@ -20,6 +20,7 @@ export const useAuth = create((set, get) => ({
     setErrorSignIn: () => set({ setError: false }),
     setIsLoadingSignIn: () => set({ isLoadingSignIn: false }),
     disabled: false,
+    dataMateri: [],
 
     fetchAuthSignIn: async (email, password) => {
        
@@ -47,7 +48,7 @@ export const useAuth = create((set, get) => ({
 
                     const token = await AsyncStorage.getItem('token'); //<-- get token when user sign in
                     set({ token });
-                    set({ isLoad: false});
+                    set({ isLoad: false});                  
 
                 }).catch(_ => { //<-- set error message if email or password wrong
                     //
@@ -167,10 +168,35 @@ export const useAuth = create((set, get) => ({
                 setTimeout(() => {
                     set({ errorSignUp: true })
                 }, 150)
-            }
-            
+            }   
         }
-        
-        
+    },
+
+    fetchDataMateri: async () => {
+
+        const autToken = get().token;
+       
+        await api.get('/podcast/yourPodcast', {
+            headers: {
+                'auth-token': autToken
+            }
+        }).then(resp => {
+
+            if(resp){
+                const dataMateri = resp?.data?.podcast;
+                set({ dataMateri })
+            }
+
+        }).catch(err => {
+            console.log('err', err)
+        })  
+    },
+
+    uploadMateri: async (
+        title, description, audioPath, imgPath
+    ) => {
+
+        const formData = new FormData();
+
     }
 }))

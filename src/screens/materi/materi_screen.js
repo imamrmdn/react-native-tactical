@@ -1,18 +1,35 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Text, StyleSheet } from 'react-native';
 import { List } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
 
 import data from '../../../data.json';
+import { colorScheme } from '../../components/theme/theme';
+import { useAuth } from '../../zustand/state';
+
+import text from '../../../text.json';
 
 export function MateriScreen(){
 
     const navigation = useNavigation();
 
-    const onHandleDetail = (title, desc, pic, id) => {
+    const { dataMateri, fetchDataMateri } = useAuth();
+
+    const onHandleDetail = (type, title, desc, pic, vid, id, created) => {
     
-        navigation.navigate('Materi Detail', { title, desc, pic, id });
+        navigation.navigate('Materi Detail', { type, title, desc, pic, vid, id, created });
 
     }
+
+    const fetchData = async () => {
+        await fetchDataMateri();
+    }
+
+    useEffect(() => {
+        fetchData();
+    },[])
+
+    console.log(dataMateri.length)
 
     return(
         <>
@@ -33,12 +50,41 @@ export function MateriScreen(){
                             <List.Item 
                                 key={e?.id} 
                                 title={e?.materi} 
-                                onPress={() => onHandleDetail(e?.title, e?.desc, e?.pic, e?.id)}
+                                rippleColor={colorScheme.blueCustom}
+                                onPress={() => {
+                                    onHandleDetail('local', e?.title, e?.desc, e?.pic, e?.vid, e?.id, 'Creator')
+                                }}
                             />
                         ))}
                     </List.Accordion>
+                    
                 ))}
+
+                {/* Materi UPload */}
+                {dataMateri.length > 0 && (
+                    <List.Accordion
+                        id="1"
+                        title="Materi Upload"
+                        left={props => <List.Icon {...props} 
+                        icon="folder-open" />}
+                    >
+                        {dataMateri?.map(e => (
+                            <List.Item 
+                                key={e?._id}
+                                title={e?.title}
+                                rippleColor={colorScheme.blueCustom}
+                                onPress={() => onHandleDetail('server', e?.title, e?.description, e?.coverImage, e?.audio, e?.id, e?.createdBy?.namePodcast)}
+                            />
+                        ))}
+                    </List.Accordion>
+                )}
             </List.AccordionGroup>
         </>
     )
 }
+
+const styles = StyleSheet.create({
+    text: {
+        color: colorScheme.black
+    }
+})

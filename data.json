@@ -10,35 +10,40 @@
                     "materi": "Wallpass 1",
                     "title": "Model latihan Attack 1-2-1 wallpass 1",
                     "desc": "Pemain offense 1 passing ke offense 2 lalu,pemain offense 2 passing ke offense 4, kemudian offense 2 membuka ruang dan offense 4 melakukan wallpass ke offense 2, lalu offense 2 melakukan shooting.",
-                    "pic": "wallpass1" 
+                    "pic": "wallpass1",
+                    "vid": "wallpass1" 
                 },
                 {
                     "id": 20,
                     "materi": "Wallpass 2",
                     "title": "Model latihan Attack 1-2-1 wallpass 2",
                     "desc": "Pemain offense 1 passing ke offsense 3 lalu,offense 3 melakukan passing ke offense 4 kemudian offense 2 membuka ruang dan offense 4 melakukan wallpass ke offense 2,setelah offense 2 menerima bola offense 2 melakukan shooting.",
-                    "pic": "wallpass2" 
+                    "pic": "wallpass2",
+                    "vid": "wallpass2"  
                 },
                 {
                     "id": 30,
                     "materi": "Wallpass 3",
                     "title": "Model latihan Attack 1-2-1 wallpass 3",
                     "desc": "Pemain offense 1 passing ke offense 2,kemudian offense 1 membuka ruang dan offense 2 melakukan passing ke offense 1,lalu offense 4 membuka ruang dan offense 1 melakukan troughpass ke offense 4,setelah menerima bola offense 4 menahan bola dan offense 3 membuka ruang, lalu offense 4 melakukan wallpass ke offense 3, dan offense 3 melakukan shooting.",
-                    "pic": "wallpass3" 
+                    "pic": "wallpass3",
+                    "vid": "wallpass3"  
                 },
                 {
                     "id": 40,
                     "materi": "Wallpass 4",
                     "title": "Model latihan Attack 1-2-1 wallpass 4",
                     "desc": "Pemain offense 1 passing ke offsense 2, lalu offense 2 passing ke offense 4,kemudian offense 2 membuka ruang dan offense 4 passing ke offense 2,setelah offense 2 menerima bola offense 4 membuka ruang dan offense 2 melakukan wallpass ke offense 4 setelah itu offense 4 melakukan shooting.",
-                    "pic": "wallpass4" 
+                    "pic": "wallpass4",
+                    "vid": "wallpass4"  
                 },
                 {
                     "id": 50,
                     "materi": "Wallpass 5",
                     "title": "Model latihan Attack 1-2-1 wallpass 5",
                     "desc": "Pemain offense 1 passing ke offsense 2, lalu offense 2 passing ke offense 4,kemudian offense 2 membuka ruang dan offense 4 passing ke offense 2,setelah offense 2 menerima bola offense 4 membuka ruang dan offense 2 melakukan wallpass ke offense 4 setelah itu offense 4 melakukan shooting.",
-                    "pic": "wallpass5" 
+                    "pic": "wallpass5",
+                    "vid": "wallpass5"  
                 }
             ]
         },
@@ -48,81 +53,91 @@
             "icon": "soccer-field",
             "sub_materi": [
                 {
-                    "id": 6,
+                    "id": 110,
                     "materi": "Troughpass 1",
                     "title": "Model latihan Attack 1-2-1 troughpass 1",
                     "desc": "Pemain offense 1 passing ke offsense 2 lalu, pemain offense 2 passing ke offense 4 setelah offense 2 passing,offense 2 langsung membuka ruang dan offense 4 melakukan wallpas ke offense 2 kemudian setelah offense 2 menerima bola,offense 3 membuka ruang kemudian offense 2 melakukan passing ke offense 3 dan offense 3 melakukan shooting.",
-                    "pic": "troughpass1" 
+                    "pic": "troughpass1",
+                    "vid": "troughpass1" 
                 },
                 {
-                    "id": 7,
+                    "id": 111,
                     "materi": "Troughpass 2",
                     "title": "Model latihan Attack 1-2-1 troughpass 2",
                     "desc": "Pemain offense 1 passing ke offsense 3 lalu pemain offense 2 membuka ruang,setelah offense 2 membuka ruang offense 3 melakukan passing ke offense 2,kemudian offense 3 membuka ruang dan offense 2 melakukan troughpass ke offense 3 dan offense 3 melakukan shooting.",
-                    "pic": "troughpass2" 
+                    "pic": "troughpass2",
+                    "vid": "troughpass2" 
                 },
                 {
-                    "id": 8,
+                    "id": 112,
                     "materi": "Troughpass 3",
-                    "title": "Model latihan Attack 1-2-1 troughpass 3",
+                   "title": "Model latihan Attack 1-2-1 troughpass 3",
                     "desc": "Pemain offense 1 passing ke offsense 3 lalu offense 3 melakukan passing ke offense 4,offense 4 melakukan delay selama offense 3 membuka ruang setelah itu offense 4 melakukan wallpass ke offense 3,kemudian offense 2 membuka ruang dan offense 3 melakukan troughpass ke offense 2 dan offense 2 melakukan shooting.",
-                    "pic": "troughpass3" 
+                    "pic": "troughpass3",
+                    "vid": "troughpass3" 
                 },
                 {
-                    "id": 9,
+                    "id": 113,
                     "materi": "Troughpass 4",
                     "title": "Model latihan Attack 1-2-1 troughpass 4",
                     "desc": "Pemain offense 4 membuka ruang kemudian offense 1 passing ke offense 4,lalu offense satu membuka ruang setelah itu offense 4 melakukan wallpass ke offense 1,kemudian offense 1 melakukan dribbling dan offense 2 membuka ruang,lalu offense 1 melakukan troughpass ke offense 2 dan offense 2 melakukan shooting.",
-                    "pic": "troughpass4" 
+                    "pic": "troughpass4",
+                    "vid": "troughpass4" 
                 },
                 {
-                    "id": 10,
+                    "id": 114,
                     "materi": "Troughpass 5",
                     "title": "Model latihan attack 1-2-1 troughpass 5",
                     "desc": "Pemain offense 1 akan passing ke offsense 2, lalu offense 2 passing ke offense 4, offense 1 membuka ruang dan offense 4 melakukan passing ke offense 1, kemudian offense 3 membuka ruang dan offense 1 melakukan troughpass ke offense 3, lalu offense 3 melakukan shooting.",
-                    "pic": "troughpass5" 
+                    "pic": "troughpass5",
+                    "vid": "troughpass5" 
                 }
             ]
         },
         {
             "key": 3,
             "materi_title": "Materi Paralel",
-            "icon": "folder",
+            "icon": "page-layout-footer",
             "sub_materi": [
                 {
                     "id": 11,
                     "materi": "Paralel 1",
                     "title": "Model latihan attack 1-2-1 paralel 1",
                     "desc": "Pemain offense 1 passing ke offense 3 setelah itu offense 3 melakukan wallpass ke offense 1,lalu offense 1 passing ke offense 2,kemudian offense 4 membuka ruang, lalu offense 2 passing ke offense 4 dan offense 4 melakukan shooting.",
-                    "pic": "paralel1" 
+                    "pic": "paralel1",
+                    "vid": "paralel1" 
                 },
                 {
                     "id": 12,
                     "materi": "Paralel 2",
                     "title": "Model latihan attack 1-2-1 paralel 2",
                     "desc": "Pemain offense 1 melakukan passing ke offense 3, lalu offense 3 passing ke offense 4 berbarengan dengan offense 1 yang membuka ruang,kemudian offense 4 passing ke offense 1 dan offense 1 melakukan shooting.",
-                    "pic": "paralel2" 
+                    "pic": "paralel2",
+                    "vid": "paralel2"  
                 },
                 {
                     "id": 13,
                     "materi": "Paralel 3",
                     "title": "Model latihan attack 1-2-1 paralel 3",
                     "desc": "Pemain offense 1 passing ke offense 2,lalu offense 2 passing ke offense 4, kemudian offense 3 membuka ruang dan offense 4 melakukan passing ke offense 3 dan offense 3 melakukan shooting.",
-                    "pic": "paralel3" 
+                    "pic": "paralel3",
+                    "vid": "paralel3"  
                 },
                 {
                     "id": 14,
                     "materi": "Paralel 4",
                     "title": "Model latihan attack 1-2-1 paralel 4",
                     "desc": "Pemain offense 1 passing ke offense 3,lalu offense 3 passing ke offense 2 berbarengan dengan offense 1 membuka ruang, setelah offense 2 menerima bola offense 2 passing ke offense 1, lalu offense 1 melakukan shooting.",
-                    "pic": "paralel4" 
+                    "pic": "paralel4",
+                    "vid": "paralel4"  
                 },
                 {
                     "id": 15,
                     "materi": "Paralel 5",
                     "title": "Model latihan attack 1-2-1 paralel 5",
                     "desc": "Pemain offense 1 passing ke offsense 2, lalu offense 2 passing ke offense 4, kemudian offense 4 passing ke offense 3, offense 2 membuka ruang dan offense 3 passing ke offense 2, kemudian offense 2 melakukan shooting.",
-                    "pic": "paralel5" 
+                    "pic": "paralel5",
+                    "vid": "paralel5"  
                 }
             ]
         }

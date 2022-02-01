@@ -9,3 +9,4 @@ export * from './setting/setting_screen';
 export * from './onLoading/on_loading_screen';
 export * from './materi/materi_detail_screen';
 export * from './materi/materi_video_screen';
+export * from './network_connection/network_connection';

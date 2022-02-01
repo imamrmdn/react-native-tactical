@@ -7,5 +7,6 @@ export const colorScheme = {
     grey: 'grey',
     red: 'red',
     yellow: 'yellow',
-    blueCustom: '#648DB5'
+    blueCustom: '#648DB5',
+    greyCustom: '#E5E5E5'
 }

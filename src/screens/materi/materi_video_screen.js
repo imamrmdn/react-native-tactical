@@ -4,17 +4,21 @@ import { useRoute } from '@react-navigation/native';
 import Video from 'react-native-video';
 import { getVideo } from '../../utils/getVideo';
 
+import text from '../../../text.json';
+
 export function VideoMateriScreen(){
 
     const route = useRoute();
 
-    const { id, pic } = route?.params;
+    const { type, id, vid } = route?.params;
 
     return(
         <>
             <Video 
                 key={id}
-                source={getVideo(pic)}
+                source={ type === 'local' ? getVideo(vid) : {uri:vid}}
+                poster={text.videoLoading}
+                posterResizeMode="contain"
                 style={styles.video}
                 controls
                 resizeMode='contain' 

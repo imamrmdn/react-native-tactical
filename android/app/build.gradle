@@ -155,7 +155,12 @@ android {
         }
     }
     buildTypes {
+        // lintOptions {
+        //     checkReleaseBuilds false
+        //     abortOnError false
+        // }
         debug {
+            
             signingConfig signingConfigs.debug
             if (nativeArchitectures) {
                 ndk {

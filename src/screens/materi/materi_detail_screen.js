@@ -13,11 +13,11 @@ export function MateriDetailScreen(){
     const route = useRoute();
     const navigation = useNavigation();
 
-    const { title, desc, pic, id } = route?.params;
+    const { type, title, desc, pic, vid, id, created } = route?.params;
 
     const onHandleVideoDetail = () => {
 
-        navigation.navigate('Video Detail', { id, pic });
+        navigation.navigate('Video Detail', { type, id, vid });
         
     }
 
@@ -42,16 +42,21 @@ export function MateriDetailScreen(){
                         <Image 
                             key={id}
                             style={styles.picture}
-                            source={getImage(pic)}
+                            source={ type === 'local' ? getImage(pic) : {uri:pic}}
                         />
 
                         {/* Video */}
-                        <TouchableOpacity
-                            style={styles.button}
-                            onPress={onHandleVideoDetail}
-                        >
-                            <Text style={styles.textVideo}>{text.seeVideo}</Text>
-                        </TouchableOpacity>
+                        <View style={{ flexDirection: 'row', justifyContent: 'space-between'}} >
+                            <Text ellipsizeMode='tail' numberOfLines={3} style={styles.created}>
+                                CreatedBy: {type === 'local' ? 'Creator' : created }
+                            </Text>
+                            <TouchableOpacity
+                                style={styles.button}
+                                onPress={onHandleVideoDetail}
+                            >
+                                <Text style={styles.textVideo}>{text.seeVideo}</Text>
+                            </TouchableOpacity>
+                        </View>
                         
                     </Card.Content>
                 </Card>
@@ -103,4 +108,8 @@ const styles = StyleSheet.create({
         height: hp('4%'),
         borderRadius: wp('1%'),
     },
+    created: {
+        flex: 1,
+        color: colorScheme.black
+    }
 })

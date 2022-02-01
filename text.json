@@ -28,5 +28,9 @@
     "errorSignUpEmail": "Email Can Not be Empty!",
     "errorSignUpNoTelp": "Phone Number Must be Valid!",
     "errorSignUpPassword": "Password Can Not be Empty!",
-    "errorSignUpServer": "Something Error From Server!"
+    "errorSignUpServer": "Something Error From Server!",
+    "networkConnection": "No Internet Network!",
+    "videoLoading": "https://media.istockphoto.com/videos/loading-circle-icon-animation-on-white-background-4k-video-loopable-video-id1302436594?s=640x640",
+    "uploadVideo": "Upload Video",
+    "uploadGambar": "Upload Gambar"
 }
